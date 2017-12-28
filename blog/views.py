@@ -74,7 +74,6 @@ class IndexView(ListView):
         }
         return data
 
-
 class CategoryView(IndexView):
     def get_queryset(self):
         cate = get_object_or_404(Category, pk=self.kwargs.get('pk'))
@@ -138,3 +137,6 @@ def search(request):
         return render(request, 'blog/index.html', {'error_msg': error_msg})
     post_list = Post.objects.filter(Q(title__icontains=q) | Q(body__icontains=q))
     return render(request, 'blog/index.html', {'error_msg': error_msg, 'post_list': post_list})
+
+def aboutView(request):
+    return render(request,'resume.html')

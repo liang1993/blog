@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Black &amp; White</title>
+    <title>梁彬彬的博客</title>
 
     <!-- meta -->
     <meta charset="UTF-8">
@@ -29,7 +29,7 @@
         <div class="row">
             <div class="col-md-4 col-sm-5 col-xs-8">
                 <div class="logo">
-                    <h1><a href="{% url 'blog:index' %}"><b>Black</b> &amp; White</a></h1>
+                    <h2><a href="{% url 'blog:index' %}"><b>要学习的东西还很多...</b></a></h2>
                 </div>
             </div><!-- col-md-4 -->
             <div class="col-md-8 col-sm-7 col-xs-4">
@@ -44,8 +44,7 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li class="cl-effect-11"><a href="{% url 'blog:index' %}" data-hover="首页">首页</a></li>
                             <li class="cl-effect-11"><a href="{% url 'blog:index' %}" data-hover="博客">博客</a></li>
-                            <li class="cl-effect-11"><a href="about.html" data-hover="关于">关于</a></li>
-                            <li class="cl-effect-11"><a href="contact.html" data-hover="联系">联系</a></li>
+                            <li class="cl-effect-11"><a href="{% url 'blog:about' %}" data-hover="关于">关于</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </nav>
@@ -139,10 +138,9 @@
     <button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
     <nav>
         <ul>
-            <li><a href="index.html">首页</a></li>
-            <li><a href="full-width.html">博客</a></li>
-            <li><a href="about.html">关于</a></li>
-            <li><a href="contact.html">联系</a></li>
+            <li><a href="{% url 'blog:index' %}">首页</a></li>
+            <li><a href="{% url 'blog:index' %}">博客</a></li>
+            <li><a href="{% url 'blog:about' %}">关于</a></li>
         </ul>
     </nav>
 </div>
